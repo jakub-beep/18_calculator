@@ -30,7 +30,21 @@ class Draw:
         plt.plot(Draw.x, y)
         plt.show()
 
+    def draw_ln(self):
+        x = np.linspace(0.1, 5, 1000)
+        y = np.log(x)
+        plt.grid()
+        plt.xlabel('x')
+        plt.ylabel("ln")
+        plt.xticks([0, 1, 2, 3, 4], [0, 1, 2, 3, 4])
+        plt.title('y = ln(x)')
+        plt.plot(x, y)
+        plt.show()
+
+
+
 
 sin = Draw(np.sin, 'sin', [-2, 2])
 cos = Draw(np.cos, 'cos', [-2, 2])
 tan = Draw(np.tan, 'tan', [-10, 10])
+ln = Draw(None, None, None)
