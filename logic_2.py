@@ -30,7 +30,7 @@ class Calculation:
         Calculation.calculation = ''
         text_result.delete(1.0, 'end')
 
-    def function(self):
+    def estimate_function(self):
         # method responsible for implementing specific functions
         if self.name == 'sin':
             Calculation.calculation = str(round(math.sin(math.radians(int(Calculation.calculation))), 4))
@@ -91,10 +91,10 @@ buttons.extend([my_button(text='(', command=lambda: calc.add_to_calculation('(')
                 my_button('-', command=lambda: calc.add_to_calculation('-')),
                 my_button('*', command=lambda: calc.add_to_calculation('*')),
                 my_button('/', command=lambda: calc.add_to_calculation('/')),
-                my_button('sin()', command=calc_sin.function),
-                my_button('cos()', command=calc_cos.function),
-                my_button('tan()', command=calc_tan.function),
-                my_button('ctg()', command=calc_ctg.function),
+                my_button('sin()', command=calc_sin.estimate_function),
+                my_button('cos()', command=calc_cos.estimate_function),
+                my_button('tan()', command=calc_tan.estimate_function),
+                my_button('ctg()', command=calc_ctg.estimate_function),
                 my_button('ln()', command=calc_ln),
                 my_button('fact!', command=calc_fac),
                 my_button('^2', command=calc_pow_2),
@@ -106,7 +106,7 @@ buttons.extend([my_button(text='(', command=lambda: calc.add_to_calculation('(')
                 my_button('=', command=calc.evaluate_calculation, bg='blue'),
                 my_button('C', command=calc_pow_2.clear_field),
                 my_button('.', command=lambda: calc.add_to_calculation('.')),
-                my_button('∼', command=calc_approx.function)
+                my_button('∼', command=calc_approx.estimate_function)
                 ])
 
 first_row = 2
