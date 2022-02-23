@@ -35,7 +35,7 @@ By creating this project I intend to learn how to build simple python projekt in
 * Pytest
 * matplotlib
 * numpy
-* 
+
 <!-- STATUS -->
 # Status
 The project is still in the phase of development.
